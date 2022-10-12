@@ -1,0 +1,17 @@
+services:
+  ordserv:
+    image: ordserv-img
+    hostname: ordserv
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "/home/madalv/Projects/food-ordering/config:/app/config"
+    ports:
+      - "9000:9000"
+    networks:
+      - restaurant
+networks:
+  restaurant:
+    name: restaurant
+    external: true
