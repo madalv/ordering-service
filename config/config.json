@@ -1,0 +1,4 @@
+{
+  "port": 9000,
+  "client": "client:9001"
+}
