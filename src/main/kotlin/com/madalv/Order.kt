@@ -24,7 +24,6 @@ data class TakeoutResponse(
 
 @Serializable
 data class TakeoutList(
-    @SerialName("order_id") val id: Int,
     @SerialName("client_id") val clientID: Int,
     val orders: List<TakeoutOrder>
 )

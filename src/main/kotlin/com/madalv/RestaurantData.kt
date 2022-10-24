@@ -15,3 +15,9 @@ class RestaurantData(
         return "{ID $restaurantID \n name $name \n addr $address \n menu nrs $menuItems \n rating $rating \n $menu}"
     }
 }
+
+@Serializable
+class MenusData(
+    val restaurants: Int,
+    @SerialName("restaurants_data") val restaurantsData: MutableList<RestaurantData>
+)
