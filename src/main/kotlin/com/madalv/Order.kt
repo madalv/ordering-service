@@ -14,7 +14,7 @@ data class TakeoutOrder(
 
 @Serializable
 data class TakeoutResponse(
-    @SerialName("order_id")val id: Int,
+    @SerialName("order_id") val id: Int,
     @SerialName("restaurant_id") val restaurantID: Int,
     @SerialName("restaurant_address") val resAddress: String,
     @SerialName("estimated_waiting_time") val estimatedWait: Double,
@@ -24,7 +24,6 @@ data class TakeoutResponse(
 
 @Serializable
 data class TakeoutList(
-    @SerialName("order_id") val id: Int,
     @SerialName("client_id") val clientID: Int,
     val orders: List<TakeoutOrder>
 )
@@ -32,7 +31,7 @@ data class TakeoutList(
 @Serializable
 data class TakeoutResponseList(
     @SerialName("order_id") val orderID: Int,
-    val orders: List<TakeoutResponse>
+    val orders: MutableList<TakeoutResponse>
 )
 
 @Serializable

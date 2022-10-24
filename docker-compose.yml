@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - "/home/madalv/Projects/food-ordering/config:/app/config"
+      - "/home/madalv/Univer/pr/ordering-service/config:/app/config"
     ports:
       - "9000:9000"
     networks:
