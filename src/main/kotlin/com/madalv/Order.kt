@@ -31,7 +31,7 @@ data class TakeoutList(
 @Serializable
 data class TakeoutResponseList(
     @SerialName("order_id") val orderID: Int,
-    val orders: MutableList<TakeoutResponse>
+    val responses: MutableList<TakeoutResponse>
 )
 
 @Serializable
