@@ -17,5 +17,9 @@ fun main() {
     embeddedServer(Netty, port = cfg.port, host = "0.0.0.0") {
         configureSerialization()
         configureRouting()
+
+        launch {
+            calculateRating()
+        }
     }.start(wait = true)
 }
